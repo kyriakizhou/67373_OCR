@@ -3,9 +3,8 @@ import pytesseract
 
 
 # Read image from which text needs to be extracted
-# img = cv2.imread("poster.jpeg")
-# img = cv2.imread("poster1.jpeg")
-# img = cv2.imread("crossword.jpeg")
+# image = cv2.imread("../images/poster.jpeg")
+# image = cv2.imread("../images/poster1.jpeg")
 
 # initialize the camera
 # If you have multiple camera connected with 
@@ -81,7 +80,6 @@ for cnt in contours:
      
     # Apply OCR on the cropped image
     text = pytesseract.image_to_string(cropped)
-    print("TEXT", text)
      
     # Appending the text into file
     file.write(text)
