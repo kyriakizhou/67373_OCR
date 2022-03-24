@@ -2,7 +2,6 @@ import cv2
 import pytesseract
 
 
-
 # Read image from which text needs to be extracted
 # img = cv2.imread("poster.jpeg")
 # img = cv2.imread("poster1.jpeg")
@@ -82,6 +81,7 @@ for cnt in contours:
      
     # Apply OCR on the cropped image
     text = pytesseract.image_to_string(cropped)
+    print("TEXT", text)
      
     # Appending the text into file
     file.write(text)
