@@ -1,5 +1,4 @@
 import sys
-import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 from google_images_search import GoogleImagesSearch
@@ -9,6 +8,13 @@ from PIL import Image
 import get_photo
 import render_page
 
+"""
+dependencies:
+pip install beautifulsoup4
+pip install Google-Images-Search
+pip install Wikipedia-API
+pip install Jinja2
+"""
 
 if __name__ == "__main__":
     #term must be in glossary of climate change terms

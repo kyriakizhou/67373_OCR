@@ -1,5 +1,4 @@
 import sys
-import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 from google_images_search import GoogleImagesSearch
