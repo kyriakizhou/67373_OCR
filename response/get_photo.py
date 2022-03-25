@@ -28,9 +28,6 @@ def display_photo(query):
         print(f'image url: {image.url}')  # image direct url
         image.download('./downloaded_images')  # download image
         image.resize(500, 500)  # resize downloaded image
-        img = Image.open(image.path)
-        img.show()
-
-if __name__ == "__main__":
-    query = sys.argv[1]
-    display_photo(query)
+        #img = Image.open(image.path)
+        #img.show()
+        return(image.path)
