@@ -18,8 +18,10 @@ from google_images_search import GoogleImagesSearch
 import urllib.request
 from PIL import Image
 
-import get_photo
-import render_page
+from response import get_photo
+from response import render_page
+# import get_photo
+# import render_page
 
 def respond(query):
     photo_addr = get_photo.display_photo(query)

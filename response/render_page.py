@@ -18,6 +18,7 @@ def get_wiki_info(query):
     return page_summary.encode('utf-8')
 
 def load_page(text, query, path_to_photo):
+    print(path_to_photo)
     root = os.path.dirname(os.path.abspath(__file__))
     templates_dir = os.path.join(root, 'templates')
     env = Environment( loader = FileSystemLoader(templates_dir) )
@@ -31,7 +32,10 @@ def load_page(text, query, path_to_photo):
             photo = f'<img src=.{path_to_photo} alt="test">',
             body = text
         ))
-    webbrowser.open_new_tab(filename)
+
+    chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
+
+    webbrowser.get(chrome_path).open_new_tab(filename)
 
 def render(path_to_photo, query):
     wiki_content = get_wiki_info(query)
