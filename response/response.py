@@ -20,6 +20,7 @@ from PIL import Image
 
 import get_photo
 import render_page
+import preprocess
 
 # def respond(query):
 #     photo_addr = get_photo.display_photo(query)
