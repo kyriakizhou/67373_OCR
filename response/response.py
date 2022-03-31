@@ -21,14 +21,14 @@ from PIL import Image
 import get_photo
 import render_page
 
-def respond(query):
-    photo_addr = get_photo.display_photo(query)
-    render_page.render(photo_addr, query)
-
-#for testing purposes
-# if __name__ == "__main__":
-#     #term must be in glossary of climate change terms
-#     query = ' '.join(sys.argv[1:len(sys.argv)])
-#     print(query)
+# def respond(query):
 #     photo_addr = get_photo.display_photo(query)
 #     render_page.render(photo_addr, query)
+
+#for testing purposes
+if __name__ == "__main__":
+    #term must be in glossary of climate change terms
+    query = ' '.join(sys.argv[1:len(sys.argv)])
+    print(query)
+    photo_addr = get_photo.display_photo(query)
+    render_page.render(photo_addr, query)
