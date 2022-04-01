@@ -15,7 +15,7 @@ def get_wiki_info(query):
     wiki_wiki = wikipediaapi.Wikipedia('en')
     page_py = wiki_wiki.page(query)
     page_summary = page_py.summary
-    return page_summary.encode('utf-8')
+    return page_summary
 
 def load_page(text, query, path_to_photo):
     # print(path_to_photo)
@@ -25,17 +25,18 @@ def load_page(text, query, path_to_photo):
     template = env.get_template('dynamic.html')
     
     filename = os.path.join(root, 'html', 'index.html')
-    with open(filename, 'w') as fh:
+    with open(filename, 'w', encoding="utf-8") as fh:
         fh.write(template.render(
             title = query,
-            h1 = query,
+            h1 = query.capitalize(),
             photo = f'<img src={"../."+str(path_to_photo)} alt="test">',
             body = text
         ))
 
-    chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
+    # chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
 
-    webbrowser.get(chrome_path).open_new_tab(filename)
+    # webbrowser.get(chrome_path).open_new_tab(filename)
+    webbrowser.open_new_tab(filename)
 
 def render(path_to_photo, query):
     wiki_content = get_wiki_info(query)
