@@ -24,6 +24,7 @@ def demo3():
     grid = f.read()
     print(grid)
     # FOR CHARLES: call your grid processing program here. grid.txt has been generated, it's under detection folder. 
+    
 
 
 # demo12()
