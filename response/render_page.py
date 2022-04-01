@@ -18,7 +18,7 @@ def get_wiki_info(query):
     return page_summary.encode('utf-8')
 
 def load_page(text, query, path_to_photo):
-    print(path_to_photo)
+    # print(path_to_photo)
     root = os.path.dirname(os.path.abspath(__file__))
     templates_dir = os.path.join(root, 'templates')
     env = Environment( loader = FileSystemLoader(templates_dir) )
@@ -29,7 +29,7 @@ def load_page(text, query, path_to_photo):
         fh.write(template.render(
             title = query,
             h1 = query,
-            photo = f'<img src=.{path_to_photo} alt="test">',
+            photo = f'<img src={"../."+str(path_to_photo)} alt="test">',
             body = text
         ))
 

@@ -2,7 +2,6 @@ import cv2
 import pytesseract
 
 def detect(image):
-    # image = cv2.imread("./images/poster.jpeg")
 
     # initialize the camera
     # If you have multiple camera connected with current device, assign a value in cam_port variable according to that

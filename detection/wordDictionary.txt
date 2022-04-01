@@ -1,0 +1,10 @@
+carbon
+climate
+volcano
+emission
+fossil
+weather
+temperature
+renewable
+mitigation
+environment

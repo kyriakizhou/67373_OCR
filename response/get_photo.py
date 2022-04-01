@@ -24,7 +24,7 @@ def display_photo(query):
     _search_params['q'] = query + ' climate'
     gis.search(search_params=_search_params)
     for image in gis.results():
-        print(f'image url: {image.url}')  # image direct url
+        # print(f'image url: {image.url}')  # image direct url
         image.download('./downloaded_images')  # download image
         image.resize(500, 500)  # resize downloaded image
         #img = Image.open(image.path)
