@@ -15,10 +15,12 @@ def get_wiki_info(query):
     wiki_wiki = wikipediaapi.Wikipedia('en')
     page_py = wiki_wiki.page(query)
     page_summary = page_py.summary
+    print(f'Retrieved wikipedia summary')
     return page_summary
 
 def load_page(text, query, path_to_photo):
     # print(path_to_photo)
+    print('Creating page')
     root = os.path.dirname(os.path.abspath(__file__))
     templates_dir = os.path.join(root, 'templates')
     env = Environment( loader = FileSystemLoader(templates_dir) )
@@ -33,10 +35,10 @@ def load_page(text, query, path_to_photo):
             body = text
         ))
 
-    # chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
+    chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
 
-    # webbrowser.get(chrome_path).open_new_tab(filename)
-    webbrowser.open_new_tab(filename)
+    webbrowser.get(chrome_path).open_new_tab(filename)
+    # webbrowser.open_new_tab(filename)
 
 def render(path_to_photo, query):
     wiki_content = get_wiki_info(query)
