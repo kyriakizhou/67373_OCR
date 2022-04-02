@@ -1,5 +1,5 @@
 from detection import detect, processDetectedText
-from response import responding
+from response import responding, preprocess
 import cv2
 
 # demo1: Sunday's detection and Charles' response are combined!
@@ -23,6 +23,8 @@ def demo3():
     f = open("detection/grid.txt", "r")
     grid = f.read()
     print(grid)
+    word_list = preprocess.extract_words("detection/grid.txt")
+    print(word_list)
     # FOR CHARLES: call your grid processing program here. grid.txt has been generated, it's under detection folder. 
     
 

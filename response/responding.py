@@ -31,6 +31,7 @@ from response import render_page
 if __name__ == "__main__":
     #term must be in glossary of climate change terms
     query = ' '.join(sys.argv[1:len(sys.argv)])
-    print(query)
+    print(f'Your Query: {query}')
     photo_addr = get_photo.display_photo(query)
+    print(f'Downloaded photo of {query}')
     render_page.render(photo_addr, query)
