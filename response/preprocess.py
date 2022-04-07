@@ -40,7 +40,7 @@ def get_all_words(path_to_file):
 
 def get_valid_words(words):
     # print(words)
-    terms = pd.read_csv("climate_change_terms.csv")
+    terms = pd.read_csv("response/climate_change_terms.csv")
     #we ignore spaces so need convert 
     all_terms = set("".join(t.split()).lower() for t in terms["term"])
     # print(all_terms)

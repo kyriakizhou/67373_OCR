@@ -5,6 +5,8 @@ import cv2
 # demo1: Sunday's detection and Charles' response are combined!
 # demo2: The program is robustness in misspell, letter-drop, uppercase etc.
 def demo12():
+    print("\n")
+    print("Program starting...")
     image = cv2.imread("testImage.png")
     text_detected = detect.detect(image)
     print("OCR detects as: ", text_detected)
@@ -14,18 +16,19 @@ def demo12():
 
 # demo3: Charles' program could read grid omnidirectionally
 def demo3():
+    print("\n")
+    print("Program starting...")
     image = cv2.imread("testImage.png")
     text_detected = detect.detect(image)
     print("OCR detects as: ", text_detected)
     processDetectedText.processGrid(text_detected)
-    # AT THIS POINT THE DETECTED GRID CONTENT HAS BEEN WRITTEN INTO grid.txt
     print("Processed grid: ")
     f = open("detection/grid.txt", "r")
     grid = f.read()
     print(grid)
     word_list = preprocess.extract_words("detection/grid.txt")
+    print("Detected words: ")
     print(word_list)
-    # FOR CHARLES: call your grid processing program here. grid.txt has been generated, it's under detection folder. 
     
 
 

@@ -1,32 +1,43 @@
 import cv2
 import pytesseract
 
+# FOR ISSAC: you can move ur function here :)
+def androidCapture():
+    image = None
+
+    return image
+
 def detect(image):
 
-    # initialize the camera
-    # If you have multiple camera connected with current device, assign a value in cam_port variable according to that
-    cam_port = 0
-    cam = cv2.VideoCapture(cam_port)
+    # ############### FOR ISAAC: comment out starting here ############
+    # # initialize the camera
+    # # If you have multiple camera connected with current device, assign a value in cam_port variable according to that
+    # cam_port = 0
+    # cam = cv2.VideoCapture(cam_port)
 
-    # reading the input using the camera
-    result, image = cam.read()
+    # # reading the input using the camera
+    # result, image = cam.read()
 
-    # If image will be detected without any error, show result
-    if result:
-        # showing result, it take frame name and image output    
-        cv2.imshow("testImage", image)
+    # # If image will be detected without any error, show result
+    # if result:
+    #     # showing result, it take frame name and image output    
+    #     cv2.imshow("testImage", image)
 
-        # saving image in local storage
-        cv2.imwrite("testImage.png", image)
+    #     # saving image in local storage
+    #     cv2.imwrite("testImage.png", image)
 
-        # If keyboard interrupt occurs, destroy image window
-        cv2.waitKey(0)
-        cv2.destroyWindow("testImage")
+    #     # If keyboard interrupt occurs, destroy image window
+    #     cv2.waitKey(0)
+    #     cv2.destroyWindow("testImage")
 
-    # If captured image is corrupted, moving to else part
-    else:
-        print("No image detected. Please try again!")
+    # # If captured image is corrupted, moving to else part
+    # else:
+    #     print("No image detected. Please try again!")
 
+    # ############### FOR ISAAC: comment out ending here ############
+
+
+    image = androidCapture()
 
     # Convert the image to gray scale
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)

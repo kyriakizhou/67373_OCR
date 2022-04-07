@@ -16,7 +16,7 @@ def buildWordMap():
 
 
 wordMap = buildWordMap()
-print("wordMap", wordMap)
+# print("wordMap", wordMap)
 
 def score(count1, count2):
     score = 0
