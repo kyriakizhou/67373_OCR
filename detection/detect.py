@@ -1,7 +1,7 @@
 import cv2
 import pytesseract
 
-# FOR ISSAC: you can move ur function here :)
+# FOR ISAAC: you can move ur function here :)
 def androidCapture():
     image = None
 
