@@ -76,4 +76,4 @@ if __name__ == "__main__":
     # print(extract_words("./tests/diagonal1.txt"))
     # """gulfstream, icecore"""
     # print(extract_words("./tests/diagonal2.txt"))
-    print(extract_words("./tests/test2.txt"))
+    print(extract_words("./tests/test3.txt"))
