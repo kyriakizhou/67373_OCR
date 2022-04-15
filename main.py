@@ -1,6 +1,7 @@
 from detection import detect, processDetectedText
 from response import responding, preprocess
 import cv2
+import random
 
 # demo1: Sunday's detection and Charles' response are combined!
 # demo2: The program is robustness in misspell, letter-drop, uppercase etc.
@@ -29,8 +30,9 @@ def demo3():
     word_list = preprocess.extract_words("detection/grid.txt")
     print("Detected words: ")
     print(word_list)
+    print("Program responding with a random detected word...")
+    responding.respond(random.choice(list(word_list)))
     
-
 
 # demo12()
 demo3()
