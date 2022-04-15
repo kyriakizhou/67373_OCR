@@ -50,7 +50,7 @@ def get_valid_words(words):
     # print(words)
     all_terms = set("".join(t.split()).lower() for t in terms["term"])
     # print(all_terms)
-    return set(filter(lambda w: w in all_terms, words))
+    return set(filter(lambda w: w in all_terms, [w.lower() for w in words]))
 
 def extract_words(path):
     """
@@ -68,11 +68,12 @@ def extract_words(path):
 if __name__ == "__main__":
     print("start preprocess")
     # print(extract_words("./tests/preprocess_test.txt"))
-    """argo, bondevent, climate"""
-    print(extract_words("./tests/horizontal1.txt"))
-    """climate, cosmicrays, ecotax"""
-    print(extract_words("./tests/vertical1.txt"))
-    """gulfstream, icecore"""
-    print(extract_words("./tests/diagonal1.txt"))
-    """gulfstream, icecore"""
-    print(extract_words("./tests/diagonal2.txt"))
+    # """argo, bondevent, climate"""
+    # print(extract_words("./tests/horizontal1.txt"))
+    # """climate, cosmicrays, ecotax"""
+    # print(extract_words("./tests/vertical1.txt"))
+    # """gulfstream, icecore"""
+    # print(extract_words("./tests/diagonal1.txt"))
+    # """gulfstream, icecore"""
+    # print(extract_words("./tests/diagonal2.txt"))
+    print(extract_words("./tests/test2.txt"))
