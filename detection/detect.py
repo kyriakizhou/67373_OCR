@@ -1,7 +1,7 @@
 import cv2
 import pytesseract
 
-# FOR ISSAC: you can move ur function here :)
+# FOR ISAAC: you can move ur function here :)
 def androidCapture():
     image = None
     cap = cv2.VideoCapture('http://isaacahn01:Yejoon77!@172.26.43.155:8080/video')
@@ -13,14 +13,15 @@ def androidCapture():
         if cv2.waitKey(1) & 0xFF == ord('q'):
             # When pressing Q it will close the window and take an image of what is on the phone
             # and save it to the specified folder
-            cv2.imwrite('detection\img.png', frame)
+            cv2.imwrite('testImage.png', frame)
             # It will also close the window the camera is on
             cv2.destroyAllWindows()
+            print("Picture taken")
             break
 
     cap.release()
 
-    image = cv2.imread('detection\img.png')
+    image = cv2.imread('testImage.png')
 
     return image
 

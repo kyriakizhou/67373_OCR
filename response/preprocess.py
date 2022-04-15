@@ -44,8 +44,8 @@ def get_all_words(path_to_file):
         # return get_diagonal_words(grid)
 
 def get_valid_words(words):
-    # terms = pd.read_csv("response/climate_change_terms.csv")
-    terms = pd.read_csv("climate_change_terms.csv")
+    terms = pd.read_csv("response/climate_change_terms.csv")
+    # terms = pd.read_csv("climate_change_terms.csv")
     #we ignore spaces so need convert 
     # print(words)
     all_terms = set("".join(t.split()).lower() for t in terms["term"])

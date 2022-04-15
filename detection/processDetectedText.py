@@ -52,11 +52,11 @@ def processGrid(text_detected):
     # print("text_detected", text_detected)
     output = ""
     for row in text_detected:
-        if len(row) == 10:
+        if len(row) >= 10:
             output += row
             output += '\n'
 
     # print("OUTPUT", output)
     file = open("detection/grid.txt","w")
-    file.write(output)
+    file.write(output[:-1])
     file.close()
