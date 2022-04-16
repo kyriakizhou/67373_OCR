@@ -20,10 +20,10 @@ from PIL import Image
 import random
 import pandas as pd
 
-from response import get_photo
-from response import render_page
-# import get_photo
-# import render_page
+# from response import get_photo
+# from response import render_page
+import get_photo
+import render_page
 
 demo = True
 
@@ -44,14 +44,14 @@ def respond(query):
         render_page.render(photo_addr, query)
 
 #for testing purposes
-# if __name__ == "__main__":
-#     #term must be in glossary of climate change terms
-#     query = ' '.join(sys.argv[1:len(sys.argv)])
-#     if demo:
-#         respond(query)
-#     else:
-#         print(f'Your Query: {query}')
-#         photo_addr = get_photo.display_photo(query)
-#         print(f'Downloaded photo of {query}')
-#         print(photo_addr)
-#         render_page.render(photo_addr, query)
+if __name__ == "__main__":
+    #term must be in glossary of climate change terms
+    query = ' '.join(sys.argv[1:len(sys.argv)])
+    if demo:
+        respond(query)
+    else:
+        print(f'Your Query: {query}')
+        photo_addr = get_photo.display_photo(query)
+        print(f'Downloaded photo of {query}')
+        print(photo_addr)
+        render_page.render(photo_addr, query)
