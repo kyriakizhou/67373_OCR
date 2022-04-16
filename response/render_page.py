@@ -56,10 +56,10 @@ def load_demo_page(text, query, path_to_photo,video_link):
             video = video_link,
             body = text
         ))
-    # chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
+    chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
 
-    # webbrowser.get(chrome_path).open_new_tab(filename)
-    webbrowser.open_new_tab(filename)
+    webbrowser.get(chrome_path).open_new_tab(filename)
+    # webbrowser.open_new_tab(filename)
 
 def render(path_to_photo, query):
     wiki_content = get_wiki_info(query)

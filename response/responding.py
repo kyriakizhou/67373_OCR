@@ -20,10 +20,10 @@ from PIL import Image
 import random
 import pandas as pd
 
-# from response import get_photo
-# from response import render_page
-import get_photo
-import render_page
+from response import get_photo
+from response import render_page
+# import get_photo
+# import render_page
 
 demo = True
 
