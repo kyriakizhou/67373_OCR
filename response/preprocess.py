@@ -6,6 +6,8 @@ import pandas as pd
 (width, height) = (10,10)
 #minimum length of a word
 min_len = 3
+#for demo
+demo = True
 
 def get_row_words(grid):
     all_row_words = []

@@ -28,7 +28,8 @@ def demo3():
     print(grid)
     word_list = preprocess.extract_words("detection/grid.txt")
     print("Detected words: ")
-    print(word_list)
+    for word in word_list:
+        print(word)
     
 
 
