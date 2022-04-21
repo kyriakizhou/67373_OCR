@@ -5,8 +5,6 @@ from google_images_search import GoogleImagesSearch
 import urllib.request
 from PIL import Image
 
-#key for google image api
-gis = GoogleImagesSearch('AIzaSyCg1SymAm6-P-FM0dIEMpvXOvt-eNd9bH0', 'c0090d82ebd453980')
 
 _search_params = {
     'q': '',
