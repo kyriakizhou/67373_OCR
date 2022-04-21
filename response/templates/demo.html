@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>iceage</title>
+    <title>{{ title }}</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -18,12 +18,11 @@
     <![endif]-->
   </head>
   <body>
-
-    <h1>Iceage</h1>
-    <div style="float:left; padding-right: 20px;"><img src=../../downloaded_images/file-20210927-21-1w4io46.jpg alt="test"></div>
+    <h1>{{ h1 }}</h1>
+    <div style="float:left; padding-right: 10px;">{{ photo }}</div>
     </br>
-    <p style="width: 70%;">Iceage is a Danish punk rock band from Copenhagen. The band was formed in 2008 and has released the albums New Brigade (2011), You're Nothing (2013), Plowing Into the Field of Love (2014),  Beyondless (2018), and  Seek Shelter (2021).</p>
-
+    <p style="width:50%;">{{ body }}</p>
+    <div style="clear:both; padding-top: 50px;">{{ video }}</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

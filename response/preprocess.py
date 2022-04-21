@@ -6,6 +6,8 @@ import pandas as pd
 (width, height) = (10,10)
 #minimum length of a word
 min_len = 3
+#for demo
+demo = True
 
 def get_row_words(grid):
     all_row_words = []
@@ -68,11 +70,12 @@ def extract_words(path):
 if __name__ == "__main__":
     print("start preprocess")
     # print(extract_words("./tests/preprocess_test.txt"))
-    """argo, bondevent, climate"""
-    print(extract_words("./tests/horizontal1.txt"))
-    """climate, cosmicrays, ecotax"""
-    print(extract_words("./tests/vertical1.txt"))
-    """gulfstream, icecore"""
-    print(extract_words("./tests/diagonal1.txt"))
-    """gulfstream, icecore"""
-    print(extract_words("./tests/diagonal2.txt"))
+    # """argo, bondevent, climate"""
+    # print(extract_words("./tests/horizontal1.txt"))
+    # """climate, cosmicrays, ecotax"""
+    # print(extract_words("./tests/vertical1.txt"))
+    # """gulfstream, icecore"""
+    # print(extract_words("./tests/diagonal1.txt"))
+    # """gulfstream, icecore"""
+    # print(extract_words("./tests/diagonal2.txt"))
+    print(extract_words("./tests/test3.txt"))
