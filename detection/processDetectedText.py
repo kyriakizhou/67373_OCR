@@ -52,11 +52,18 @@ def processGrid(text_detected):
     # print("text_detected", text_detected)
     output = ""
     for row in text_detected:
+        if len(row) < 10: continue
         if len(row) >= 10:
-            output += row
-            output += '\n'
+            for c in row:
+                if not c.isspace():
+                    output += c
+        output += '\n'
 
     # print("OUTPUT", output)
+    testCountLines = output.split('\n')
+    lineLens = [len(s) for s in testCountLines]
+    print(f'height: {testCountLines}')
+    print(lineLens)
     file = open("detection/grid.txt","w")
     file.write(output[:-1])
     file.close()

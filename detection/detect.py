@@ -22,6 +22,7 @@ def androidCapture():
     cap.release()
 
     image = cv2.imread('testImage.png')
+    print("STEP1")
 
     return image
 
@@ -56,6 +57,7 @@ def detect(image):
 
 
     image = androidCapture()
+    print("STEP2")
 
     # Convert the image to gray scale
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -67,6 +69,7 @@ def detect(image):
     # Kernel size increases or decreases the area of the rectangle to be detected.
     # A smaller value like (10, 10) will detect each word instead of a sentence.
     rect_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (5000, 5000))
+    print("STEP3")
 
     # Applying dilation on the threshold image
     dilation = cv2.dilate(thresh1, rect_kernel, iterations = 1)
