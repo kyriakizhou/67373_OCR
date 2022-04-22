@@ -17,7 +17,7 @@ def demo12():
     responding.respond(text_detected)
 
 # demo3: Charles' program could read grid omnidirectionally
-def demo3():
+def demo3(index):
     print("\n")
     print("Program starting...")
     image = cv2.imread("testImage.png")
@@ -32,11 +32,17 @@ def demo3():
     print("Detected words: ")
     print(word_list)
     print("Program responding with a random detected word...")
-    responding.respond(random.choice(list(word_list)))
+    # responding.respond(random.choice(list(word_list)))
+    responding.respond(list(word_list)[index])
     pushToGit()
 
     
 
 # demo12()
-demo3()
+# demo3()
 
+import sys
+index = sys.argv[1]
+index = index-1
+assert(0 <= index)
+demo3(index)
