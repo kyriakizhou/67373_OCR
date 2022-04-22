@@ -28,7 +28,7 @@ def demo3():
     grid = f.read()
     print(grid)
     word_list = preprocess.extract_words("detection/grid.txt")
-    print("Detected words: "
+    print("Detected words: ", word_list)
     print(word_list)
     print("Program responding with a random detected word...")
     responding.respond(random.choice(list(word_list)))

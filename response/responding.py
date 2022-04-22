@@ -33,7 +33,7 @@ def respond(query):
     query string MUST be in demo_terms.csv
     """
     if demo:
-        demo_data = pd.read_csv("demo_terms.csv")
+        demo_data = pd.read_csv("response/demo_terms.csv")
         path_to_photo = "./downloaded_images/"+query+".jpg"
         text = demo_data[demo_data["word"] == query]["description"].iloc[0]
         video_link = demo_data[demo_data["word"]==query]["video_frame"].iloc[0]
