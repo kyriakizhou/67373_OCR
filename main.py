@@ -42,7 +42,7 @@ def demo3(index):
 # demo3()
 
 import sys
-index = sys.argv[1]
+index = int(sys.argv[1])
 index = index-1
 assert(0 <= index)
 demo3(index)
