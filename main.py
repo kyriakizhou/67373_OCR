@@ -40,6 +40,7 @@ def demo3(index):
     # responding.respond(list(word_list)[index])
     for word in word_list:
         responding.respond(word, False)
+    print("index", index, "type(index)", type(index))
     responding.respond(word_list[index], True)
     print("Program finishing...\n")
     pushToGit()

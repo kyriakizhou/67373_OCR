@@ -35,6 +35,7 @@ def respond(query, isIndex):
     if demo:
         demo_data = pd.read_csv("response/demo_terms.csv")
         path_to_photo = ""+query+".jpg"
+        # NOTE: debug
         text = demo_data[demo_data["word"] == query]["description"].iloc[0]
         video_link = demo_data[demo_data["word"]==query]["video_frame"].iloc[0]
         render_page.load_demo_page(text,query,path_to_photo,video_link, isIndex)
