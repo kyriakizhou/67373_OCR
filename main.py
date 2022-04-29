@@ -34,7 +34,8 @@ def demo3(index):
     print("Detected words:\n")
     print(word_list)
     print("\n")
-    print("Program responding with %dth detected word..." % index+str(1), "\n")
+    i = index + 1
+    print("Program responding with %dth detected word..." % i, "\n")
     # responding.respond(random.choice(list(word_list)))
     # responding.respond(list(word_list)[index])
     for word in word_list:
