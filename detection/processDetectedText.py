@@ -53,10 +53,14 @@ def processGrid(text_detected):
     output = ""
     for row in text_detected:
         if len(row) >= 10:
-            row = row[:10]
+            r = []
             for c in row:
-                if not c.isspace():
-                    output += c
+                if not (c.isspace()):
+                    r.append(c)
+            r = r[:10]
+            print("r", r)
+            for c in r:
+                output += c
             output += '\n'
 
     # print("OUTPUT", output)
