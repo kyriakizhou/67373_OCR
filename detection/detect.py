@@ -81,3 +81,5 @@ def detect(image):
         file.close
 
         return text
+
+
