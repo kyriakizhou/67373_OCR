@@ -42,7 +42,7 @@ def demo3(index):
         responding.respond(word, False)
     print("index", index, "type(index)", type(index))
     responding.respond(word_list[index], True)
-    print("Program finishing...\n")
+    print("Program finishing...\n\n\n\n\n\n")
     pushToGit()
 
 
