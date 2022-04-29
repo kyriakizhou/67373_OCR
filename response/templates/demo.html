@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>CHARLES帅哥</title>
+    <title>{{ title }}</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -18,11 +18,11 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Iceage</h1>
-    <div style="float:left; padding-right: 10px;"><img style="width:500px;" src=../../downloaded_images/iceage.jpg alt="test"></div>
+    <h1>{{ h1 }}</h1>
+    <div style="float:left; padding-right: 10px;">{{ photo }}</div>
     </br>
-    <p style="width:50%;">An ice age is a long period of reduction in the temperature of Earth's surface and atmosphere, resulting in the presence or expansion of continental and polar ice sheets and alpine glaciers. Earth's climate alternates between ice ages and greenhouse periods, during which there are no glaciers on the planet. Earth is currently in the Quaternary glaciation</p>
-    <div style="clear:both; padding-top: 50px;"><iframe width="560" height="315" src="https://www.youtube.com/embed/I4EZCy14te0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <p style="width:50%;">{{ body }}</p>
+    <div style="clear:both; padding-top: 50px;">{{ video }}</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
