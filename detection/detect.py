@@ -4,8 +4,10 @@ import pytesseract
 # FOR ISAAC: you can move ur function here :)
 def androidCapture():
     image = None
-    # cap = cv2.VideoCapture('http://isaacahn01:Yejoon77!@172.26.43.155:8080/video')
-    cap = cv2.VideoCapture('http://172.26.115.145:8080/video')
+    cap = cv2.VideoCapture('http://172.26.56.94:8080/video')
+    # cap = cv2.VideoCapture('http://100.66.52.233:8080/video')
+    # cap = cv2.VideoCapture('rtsp://10.0.0.174:8080/out.h264')
+    # cap = cv2.VideoCapture('http://172.26.11.27:8080/video')
     while(True):
 
         ret, frame = cap.read()
@@ -23,7 +25,6 @@ def androidCapture():
     cap.release()
 
     image = cv2.imread('testImage.png')
-    print("STEP1")
 
     return image
 
@@ -113,3 +114,5 @@ def detect(image):
         file.close
 
         return text
+
+
