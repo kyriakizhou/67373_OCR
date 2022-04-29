@@ -3,4 +3,4 @@ def pushToGit():
     cmd = 'git add . \ngit commit -m "web page updated!"\ngit push'
     os.system(cmd)
 
-pushToGit()
+# pushToGit()
