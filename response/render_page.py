@@ -41,6 +41,7 @@ def load_page(text, query, path_to_photo):
     # webbrowser.open_new_tab(filename)
 
 def load_demo_page(text, query, path_to_photo,video_link):
+    print(path_to_photo)
     print('Creating page')
     root = os.path.dirname(os.path.abspath(__file__))
     templates_dir = os.path.join(root, 'templates')
@@ -52,7 +53,8 @@ def load_demo_page(text, query, path_to_photo,video_link):
         fh.write(template.render(
             title = query,
             h1 = query.capitalize(),
-            photo = f'<img style="width:500px;" src={"../."+str(path_to_photo)} alt="test">',
+            # photo = f'<img style="width:500px;" src={"../."+str(path_to_photo)} alt="test">',
+            photo = f'<img style="width:500px;" src={str(path_to_photo)} alt="test">',
             video = video_link,
             body = text
         ))
