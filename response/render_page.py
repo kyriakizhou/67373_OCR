@@ -40,15 +40,16 @@ def load_page(text, query, path_to_photo):
     webbrowser.get(chrome_path).open_new_tab(filename)
     # webbrowser.open_new_tab(filename)
 
-def load_demo_page(text, query, path_to_photo,video_link):
-    print(path_to_photo)
+def load_demo_page(text, query, path_to_photo,video_link, isIndex):
+    # print(path_to_photo)
     print('Creating page')
     root = os.path.dirname(os.path.abspath(__file__))
     templates_dir = os.path.join(root, 'templates')
     env = Environment( loader = FileSystemLoader(templates_dir) )
     template = env.get_template('demo.html')
     
-    filename = os.path.join(root, 'html', query+'index.html')
+    fname = "index.html" if isIndex else (query+'index.html')
+    filename = os.path.join(root, 'html', fname)
     with open(filename, 'w', encoding="utf-8") as fh:
         fh.write(template.render(
             title = query,

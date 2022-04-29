@@ -27,7 +27,7 @@ from response import render_page
 
 demo = True
 
-def respond(query):
+def respond(query, isIndex):
     """
     if demo is true, query should be a set of terms from preprocess.py
     query string MUST be in demo_terms.csv
@@ -37,7 +37,7 @@ def respond(query):
         path_to_photo = ""+query+".jpg"
         text = demo_data[demo_data["word"] == query]["description"].iloc[0]
         video_link = demo_data[demo_data["word"]==query]["video_frame"].iloc[0]
-        render_page.load_demo_page(text,query,path_to_photo,video_link)
+        render_page.load_demo_page(text,query,path_to_photo,video_link, isIndex)
     else:
         photo_addr = get_photo.display_photo(query)
         print(photo_addr)

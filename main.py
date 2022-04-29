@@ -30,7 +30,7 @@ def demo3(index):
     grid = f.read()
     print(grid)
     print("\n")
-    word_list = preprocess.extract_words("detection/grid.txt")
+    word_list = list(preprocess.extract_words("detection/grid.txt"))
     print("Detected words:\n")
     print(word_list)
     print("\n")
@@ -39,7 +39,8 @@ def demo3(index):
     # responding.respond(random.choice(list(word_list)))
     # responding.respond(list(word_list)[index])
     for word in word_list:
-        responding.respond(word)
+        responding.respond(word, False)
+    responding.respond(wordlist[index], True)
     print("Program finishing...\n")
     pushToGit()
 
