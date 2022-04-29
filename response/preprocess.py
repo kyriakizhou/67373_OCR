@@ -89,8 +89,8 @@ demo = True
 
 #words is global set of valid words
 def get_valid_words():
-    # terms = pd.read_csv("response/climate_change_terms.csv")
-    terms = pd.read_csv("climate_change_terms.csv")
+    terms = pd.read_csv("response/climate_change_terms.csv")
+    # terms = pd.read_csv("climate_change_terms.csv")
     all_terms = set("".join(t.split()).lower() for t in terms["term"])
     return all_terms
 
@@ -203,15 +203,15 @@ def extract_words(path):
         #returning just a list of words
         return list(map(lambda x: x[-1], words))
 
-if __name__ == "__main__":
-    print("start preprocess")
-    # print(extract_words("./tests/preprocess_test.txt"))
-    # """argo, bondevent, climate"""
-    # print(extract_words("./tests/horizontal1.txt"))
-    # """climate, cosmicrays, ecotax"""
-    # print(extract_words("./tests/vertical1.txt"))
-    # """gulfstream, icecore"""
-    # print(extract_words("./tests/diagonal1.txt"))
-    # """gulfstream, icecore"""
-    # print(extract_words("./tests/diagonal2.txt"))
-    print(extract_words("./tests/test2.txt"))
+# if __name__ == "__main__":
+#     print("start preprocess")
+#     # print(extract_words("./tests/preprocess_test.txt"))
+#     # """argo, bondevent, climate"""
+#     # print(extract_words("./tests/horizontal1.txt"))
+#     # """climate, cosmicrays, ecotax"""
+#     # print(extract_words("./tests/vertical1.txt"))
+#     # """gulfstream, icecore"""
+#     # print(extract_words("./tests/diagonal1.txt"))
+#     # """gulfstream, icecore"""
+#     # print(extract_words("./tests/diagonal2.txt"))
+#     print(extract_words("./tests/test2.txt"))

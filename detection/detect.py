@@ -5,7 +5,7 @@ import pytesseract
 def androidCapture():
     image = None
     # cap = cv2.VideoCapture('http://isaacahn01:Yejoon77!@172.26.43.155:8080/video')
-    cap = cv2.VideoCapture('http://172.26.115.145:8080/video')
+    cap = cv2.VideoCapture('http://172.26.88.84:8080/video')
     while(True):
 
         ret, frame = cap.read()
@@ -23,42 +23,11 @@ def androidCapture():
     cap.release()
 
     image = cv2.imread('testImage.png')
-    print("STEP1")
 
     return image
 
 def detect(image):
-
-    # ############### FOR ISAAC: comment out starting here ############
-    # # initialize the camera
-    # # If you have multiple camera connected with current device, assign a value in cam_port variable according to that
-    # cam_port = 0
-    # cam = cv2.VideoCapture(cam_port)
-
-    # # reading the input using the camera
-    # result, image = cam.read()
-
-    # # If image will be detected without any error, show result
-    # if result:
-    #     # showing result, it take frame name and image output    
-    #     cv2.imshow("testImage", image)
-
-    #     # saving image in local storage
-    #     cv2.imwrite("testImage.png", image)
-
-    #     # If keyboard interrupt occurs, destroy image window
-    #     cv2.waitKey(0)
-    #     cv2.destroyWindow("testImage")
-
-    # # If captured image is corrupted, moving to else part
-    # else:
-    #     print("No image detected. Please try again!")
-
-    # ############### FOR ISAAC: comment out ending here ############
-
-
     image = androidCapture()
-    print("STEP2")
 
     # Convert the image to gray scale
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -70,7 +39,6 @@ def detect(image):
     # Kernel size increases or decreases the area of the rectangle to be detected.
     # A smaller value like (10, 10) will detect each word instead of a sentence.
     rect_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (5000, 5000))
-    print("STEP3")
 
     # Applying dilation on the threshold image
     dilation = cv2.dilate(thresh1, rect_kernel, iterations = 1)

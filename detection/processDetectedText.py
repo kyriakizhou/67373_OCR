@@ -52,12 +52,12 @@ def processGrid(text_detected):
     # print("text_detected", text_detected)
     output = ""
     for row in text_detected:
-        if len(row) < 10: continue
         if len(row) >= 10:
+            row = row[:10]
             for c in row:
                 if not c.isspace():
                     output += c
-        output += '\n'
+            output += '\n'
 
     # print("OUTPUT", output)
     testCountLines = output.split('\n')
