@@ -5,7 +5,7 @@ import pytesseract
 def androidCapture():
     image = None
     # cap = cv2.VideoCapture('http://isaacahn01:Yejoon77!@172.26.43.155:8080/video')
-    cap = cv2.VideoCapture('http://172.26.88.84:8080/video')
+    cap = cv2.VideoCapture('http://172.26.24.102:8080/video')
     while(True):
 
         ret, frame = cap.read()
