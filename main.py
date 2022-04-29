@@ -40,7 +40,7 @@ def demo3(index):
     # responding.respond(list(word_list)[index])
     for word in word_list:
         responding.respond(word, False)
-    responding.respond(wordlist[index], True)
+    responding.respond(word_list[index], True)
     print("Program finishing...\n")
     pushToGit()
 
