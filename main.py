@@ -36,7 +36,9 @@ def demo3(index):
     print("\n")
     print("Program responding with %dth detected word..." % index+str(1), "\n")
     # responding.respond(random.choice(list(word_list)))
-    responding.respond(list(word_list)[index])
+    # responding.respond(list(word_list)[index])
+    for word in word_list:
+        responding.respond(word)
     print("Program finishing...\n")
     pushToGit()
 

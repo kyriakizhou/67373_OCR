@@ -47,7 +47,7 @@ def load_demo_page(text, query, path_to_photo,video_link):
     env = Environment( loader = FileSystemLoader(templates_dir) )
     template = env.get_template('demo.html')
     
-    filename = os.path.join(root, 'html', 'index.html')
+    filename = os.path.join(root, 'html', query+'index.html')
     with open(filename, 'w', encoding="utf-8") as fh:
         fh.write(template.render(
             title = query,
@@ -58,8 +58,8 @@ def load_demo_page(text, query, path_to_photo,video_link):
         ))
     chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
 
-    webbrowser.get(chrome_path).open_new_tab(filename)
-    # webbrowser.open_new_tab(filename)
+    # webbrowser.get(chrome_path).open_new_tab(filename)
+    webbrowser.open_new_tab(filename)
 
 def render(path_to_photo, query):
     wiki_content = get_wiki_info(query)
