@@ -19,27 +19,23 @@ def demo12():
 # demo3: Charles' program could read grid omnidirectionally
 def demo3(index):
     print("\n")
-    print("Program starting...")
+    print("Program starting...\n")
     image = cv2.imread("testImage.png")
     text_detected = detect.detect(image)
-    print("OCR detects as: ", text_detected)
+    print("OCR detects as: \n", text_detected, "\n")
     processDetectedText.processGrid(text_detected)
-    print("Processed grid: ")
+    print("Processed grid: \n")
     f = open("detection/grid.txt", "r")
     grid = f.read()
-    print(grid)
+    print(grid, "\n")
     word_list = preprocess.extract_words("detection/grid.txt")
-    print("Detected words: ", word_list)
+    print("Detected words: \n", word_list, "\n")
     print(word_list)
-    print("Program responding with a random detected word...")
+    print("Program responding with a detected word %d..." % index, "\n")
     # responding.respond(random.choice(list(word_list)))
     responding.respond(list(word_list)[index])
     pushToGit()
 
-    
-
-# demo12()
-# demo3()
 
 import sys
 index = int(sys.argv[1])

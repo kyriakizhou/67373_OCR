@@ -195,11 +195,11 @@ def extract_words(path):
         words = p1(grid)
         cleaned_grid = cleanup(words)
         #printing results
-        print(f'Input grid:')
-        for line in grid: 
-            print(line)
-        print('Processed grid:')
-        print(cleaned_grid)
+        # print(f'Input grid:')
+        # for line in grid: 
+        #     print(line)
+        print('Clean processed grid: \n')
+        print(cleaned_grid, "\n")
         #returning just a list of words
         return list(map(lambda x: x[-1], words))
 
