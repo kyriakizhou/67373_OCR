@@ -3,6 +3,7 @@ from response import responding, preprocess
 import cv2
 import random
 from webpageScript import pushToGit
+import os
 
 # demo1: Sunday's detection and Charles' response are combined!
 # demo2: The program is robustness in misspell, letter-drop, uppercase etc.
@@ -42,6 +43,8 @@ def demo3(index):
         responding.respond(word, False)
     print("index", index, "type(index)", type(index))
     responding.respond(word_list[index], True)
+    cmd = 'open qr.png'
+    os.system(cmd)
     print("Program finishing...\n\n\n\n\n\n")
     pushToGit()
 
