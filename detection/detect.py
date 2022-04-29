@@ -17,7 +17,7 @@ def androidCapture():
             cv2.imwrite('testImage.png', frame)
             # It will also close the window the camera is on
             cv2.destroyAllWindows()
-            print("Picture taken")
+            print("Picture taken...\n")
             break
 
     cap.release()

@@ -62,8 +62,8 @@ def processGrid(text_detected):
     # print("OUTPUT", output)
     testCountLines = output.split('\n')
     lineLens = [len(s) for s in testCountLines]
-    print(f'height: {testCountLines}')
-    print(lineLens)
+    # print(f'height: {testCountLines}')
+    # print(lineLens)
     file = open("detection/grid.txt","w")
     file.write(output[:-1])
     file.close()
