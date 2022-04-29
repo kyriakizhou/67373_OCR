@@ -58,7 +58,6 @@ def processGrid(text_detected):
                 if not (c.isspace()):
                     r.append(c)
             r = r[:10]
-            print("r", r)
             for c in r:
                 output += c
             output += '\n'
