@@ -1,8 +1,8 @@
-import string
-
+# for each word, records the character count
 def buildCharCount(word):
     return {e: word.count(e) for e in set(word)}
 
+# build a word dictionary based on terms in wordDictionary.txt
 def buildWordMap():
     f = open("detection/wordDictionary.txt", "r")
     words = f.read()
@@ -16,7 +16,6 @@ def buildWordMap():
 
 
 wordMap = buildWordMap()
-# print("wordMap", wordMap)
 
 def score(count1, count2):
     score = 0
@@ -35,7 +34,7 @@ def findBestMatch(count, wordMap):
                 bestMatch = word
     return bestMatch
 
-# for single word
+# Find best match for the detected input word from the wordMap
 def processDetectedText(text_detected):
     # trim leading and trailing white spaces
     text_detected = text_detected.strip()
@@ -46,17 +45,15 @@ def processDetectedText(text_detected):
     matchedWord = findBestMatch(count, wordMap)
     return matchedWord
 
-
+# Format the 10x10 char grid.
 def processGrid(text_detected):
     text_detected = text_detected.split("\n")
-    # print("text_detected", text_detected)
     output = ""
     for row in text_detected:
         if len(row) >= 10:
             r = []
             for c in row:
-                if not (c.isspace()):
-                    r.append(c)
+                if not (c.isspace()): r.append(c)
             r = r[:10]
             for c in r:
                 output += c

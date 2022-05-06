@@ -1,10 +1,9 @@
 import cv2
 import pytesseract
 
-# FOR ISAAC: you can move ur function here :)
 def androidCapture():
     image = None
-    # cap = cv2.VideoCapture('http://isaacahn01:Yejoon77!@172.26.43.155:8080/video')
+    # Note: replace the http url with the one your WebCam app
     cap = cv2.VideoCapture('http://isaacahn01:Yejoon77!@172.26.66.37:8080/video')
     while(True):
 
@@ -14,7 +13,7 @@ def androidCapture():
         if cv2.waitKey(1) & 0xFF == ord('q'):
             # When pressing Q it will close the window and take an image of what is on the phone
             # and save it to the specified folder
-            cv2.imwrite('testImage.png', frame)
+            cv2.imwrite('imageCaptured.png', frame)
             # It will also close the window the camera is on
             cv2.destroyAllWindows()
             print("Picture taken...\n")
@@ -22,7 +21,7 @@ def androidCapture():
 
     cap.release()
 
-    image = cv2.imread('testImage.png')
+    image = cv2.imread('imageCaptured.png')
 
     return image
 
@@ -50,11 +49,6 @@ def detect(image):
     # Creating a copy of image
     im2 = image.copy()
 
-    # A text file is created and flushed
-    file = open("recognized.txt", "w+")
-    file.write("")
-    file.close()
-
     # Looping through the identified contours
     # Then rectangular part is cropped and passed on to pytesseract for extracting text from it
     # Extracted text is then written into the text file
@@ -67,18 +61,8 @@ def detect(image):
         # Cropping the text block for giving input to OCR
         cropped = im2[y:y + h, x:x + w]
         
-        # Open the file in append mode
-        file = open("recognized.txt", "a")
-        
         # Apply OCR on the cropped image
         text = pytesseract.image_to_string(cropped)
-        
-        # Appending the text into file
-        file.write(text)
-        file.write("\n")
-        
-        # Close the file
-        file.close
 
         return text
 
