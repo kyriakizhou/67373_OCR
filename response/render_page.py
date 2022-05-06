@@ -5,6 +5,10 @@ from jinja2 import Environment, FileSystemLoader
 import os
 
 def load_page(items):
+    """
+    Given a list of dictionaries for each term, where each key maps to desired content,
+    populates the demo.html template. Will open the page locally in your web browser.
+    """
     print('Creating page')
     root = os.path.dirname(os.path.abspath(__file__))
     templates_dir = os.path.join(root, 'templates')
@@ -15,6 +19,6 @@ def load_page(items):
     filename = os.path.join(root, 'html', fname)
     with open(filename, 'w', encoding="utf-8") as fh:
         fh.write(template.render(items = items))
-    # chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
-    # webbrowser.get(chrome_path).open_new_tab(filename)
-    webbrowser.open_new_tab(filename)
+    chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
+    webbrowser.get(chrome_path).open_new_tab(filename)
+    # webbrowser.open_new_tab(filename)
