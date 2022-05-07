@@ -4,15 +4,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="styles.css">
+
     <title>Recognized Content</title>
 
   </head>
   <body>
     {% for item in items %}
-      <div>{{item.term}}</div>
-      <div>{{item.image}}</div>
-      <div>{{item.video_link}}</div>
-      <div>{{item.text}}</div>
+      <div class="title">{{item.term}}</div>
+      <div class="image">{{item.image}}</div>
+      <div class="video">{{item.video_link}}</div>
+      <div class="text">{{item.text}}</div>
+      <hr>
     {% endfor %}
   </body>
 </html>

@@ -1,0 +1,19 @@
+.image{
+    max-width:100%;
+}
+
+img{
+    max-width: min(560px, 100%);
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+iframe{
+    max-width:100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.text{
+    max-width: min(560px, 100%);
+}
