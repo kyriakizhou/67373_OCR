@@ -41,8 +41,9 @@ def detectGrid(index):
     print("\n")
     i = index + 1
     print("Program responding with %dth detected word..." % i, "\n")
-    for word in word_list:
-        responding.respond(word, False)
+    # for word in word_list:
+    #     responding.respond(word, False)
+    responding.respond(word_list)
     print("index", index, "type(index)", type(index))
     responding.respond(word_list[index], True)
     cmd = 'open qr.png'

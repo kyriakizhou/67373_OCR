@@ -20,7 +20,14 @@ text detection from images. This file is extensible, simply adding new standard 
 this file allows the program to auto correct deformed versions of the standard words.
 
 2. response:
-
+ - responding.py: includes the main functionality that generates a webpage of content given a list of terms
+ the terms must appear in demo_terms.csv
+ - render_page.py: populates the demo.html template under response/templates/ and is called from responding.py
+ - preprocess.py: contains the main functionality for returning recognized words and prints the cleaned grid.
+ - Subfolders include: 
+    - Tests: - contain a variety of grids that can be run directly in preprocess.py
+    - html: - where the generated html page (index.html) is stored, along with accompanying images for each term
+    - templates: - contains demo.html, which is the template which will be populated by render_page.py
 
 Four root files:
 1. main.py: the main file for running the program. Everytime to run the program, cd in the root folder,
